@@ -14,11 +14,17 @@ JOKE = (
 )
 
 
+def get_joke() -> str:
+    """Return the entry joke."""
+    return JOKE
+
+
 def main() -> None:
+    joke = get_joke()
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
-        f.write(JOKE)
-    print(JOKE)
+        f.write(joke)
+    print(joke)
 
 
 if __name__ == "__main__":
